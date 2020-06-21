@@ -1,3 +1,15 @@
+# v5.0 
+1. 引入wildcard函数，patsubst函数
+2. wildcard用于获取符合特定规则的文件名
+```makefile
+$(wildcard ****.cpp)  # 过来所有的.cpp文件
+```
+3. patsubst用于文本处理
+```makefile
+$(patsubst %.cpp, %.o, $(SOURCES))  # 将SOURCE表示的所有.cpp文件替换为同名的.o文件
+```
+
+
 # v4.0
 1. 引入特殊符号，精简makefile
 2. all:library.cpp main.cpp
