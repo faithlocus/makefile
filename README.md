@@ -1,3 +1,10 @@
+# v4.0
+1. 引入特殊符号，精简makefile
+2. all:library.cpp main.cpp
+> $@指代all，即target
+> $<指代library.cpp, 即第一个dependency
+> $^指代library.cpp和main.cpp,即所有的dependency
+
 
 # v3.0
 1. 使用变量，变量名允许自定义(抽象功能)
