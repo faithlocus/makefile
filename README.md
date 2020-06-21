@@ -1,3 +1,13 @@
+# v6.0
+1. 引入static Pattern Rule
+```makefile
+targets:target-pattern:prereq-patterns
+# targets不是一个目标文件，而是一组目标文件
+# target-pattern表示目标文件的特征%.o
+# prereq-patterns表示依赖文件的特征%.cpp
+```
+
+
 # v5.0 
 1. 引入wildcard函数，patsubst函数
 2. wildcard用于获取符合特定规则的文件名

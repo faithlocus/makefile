@@ -11,14 +11,8 @@ all:hello
 hello:$(OBJS)
 	$(CC) $(LFLAGS) $^ -o $@ 
 
-main.o:main.cpp
-	$(CC) $(CFLAGS) $<
-
-function1.o:function1.cpp
-	$(CC) $(CFLAGS) $<
-
-function2.o:function2.cpp
-	$(CC) $(CFLAGS) $<
+$(OBJS):%.o:%.cpp
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
 	rm -rf *.o hello
